@@ -8,7 +8,5 @@ export default Ember.Controller.extend({
 
   isValid: Ember.computed.and('message', 'useremail'),
 
-  isEmpty: Ember.computed('message', function() {
-    console.log(this.get('message'));
-  })
+  canSave: Ember.computed.and('message', 'useremail')
 });
