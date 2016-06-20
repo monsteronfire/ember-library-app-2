@@ -12,6 +12,10 @@ export default Ember.Route.extend({
     controller.set('buttonLabel', 'Save changes');
   },
 
+  renderTemplate() {
+    this.render('libraries/form');
+  },
+
   actions: {
     saveLibrary(newLibrary) {
       newLibrary.save().then(() => this.transitionTo('libraries'));
